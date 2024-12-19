@@ -1,34 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from "react";
 import './App.css'
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
 
+//  const [isClick, setIsClick] = React.useState(false)
+  
+//   const toggleButton = () => {
+//     setIsClick(!isClick)
+//   }
+  
+//   const conditionStyle = {
+  //     color: isClick ? 'white' : 'black',
+  //     backgroundColor: isClick ? 'blue' : 'cyan'
+  //   }
+  
+  const isLoggedIn = true
+  const userName = 'shanto'
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+  // <div className="flex p-10 m-20 justify-center gap-6">
+
+  //     <button onClick={toggleButton} className="bg-green-700 text-white p-5 rounded-full">
+  //       {!isClick ? 'clicked' : 'not clicked'}
+  //     </button>
+
+  //     <div style={conditionStyle} className="bg-green-700 text-white p-5 rounded-full">
+  //        hey {!isClick ? 'clicked' : 'not clicked'} !!!
+  //     </div>
+  // </div>
+
+  <div>
+     {isLoggedIn ? <h1>welcome {userName} </h1>:
+                   <h1>please log in </h1>}
+  </div>
   )
 }
 
